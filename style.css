@@ -127,12 +127,12 @@ a:hover::after {
 
 
 .fastest {
-    color: rgb(138, 247, 249);
-    padding: 0px 12px;
     position: relative;
     display: inline-block;
+    margin: 0;
+    padding: 0;
     width: fit-content;
-    transform: rotate(-2deg);
+    text-decoration: underline;
 }
 
 .fastest::after {
