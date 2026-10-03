@@ -53,6 +53,7 @@ body {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    align-items: center;
     gap: 0;
     max-width: 70%;
 }
@@ -61,6 +62,23 @@ body {
     padding: 0;
     margin: 4px;
     text-shadow: #000a 1px 1px 5px;
+}
+
+.works {
+    border-top: #fff9 1px solid;
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    padding-top: 12px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.page-workshop img {
+    width: 100%;
 }
 
 .sp {
@@ -87,11 +105,11 @@ header {
     padding: 12px;
 }
 
-img {
+.hc {
     transition: transform 0.3s;
 }
 
-img:hover {
+.hc:hover {
     transform: scale(1.05);
 }
 
@@ -125,6 +143,72 @@ a:hover::after {
     width: 100%;
 }
 
+#buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    gap: 12px;
+}
+
+#buttons * {
+    padding: 8px 16px;
+    text-shadow: none;
+}
+
+button, .butt {
+    color: white;
+    background-color: transparent;
+    outline: none;
+    text-shadow: none;
+    padding: 8px 16px;
+    border: white 2px solid;
+    cursor: pointer;
+    font-size: inherit;
+    position: relative;
+    font-family: inherit;
+    display: inline-block;
+}
+
+button::after, .butt::after {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; 
+    width: 0%; height: 100%;
+    background-color: #ffffff;
+    z-index: 1;
+    mix-blend-mode: difference;
+    transition: width 0.3s ease; 
+    pointer-events: none;
+}
+
+button:hover::after, .butt:hover::after {
+    left: 0; right: auto; 
+    width: 100%;
+}
+
+.gallery {
+  display: flex;
+  gap: 12px;
+  flex-direction: row;
+  width: 100%;
+}
+
+.gallery img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.ships {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: -3px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 .fastest {
     position: relative;
@@ -132,7 +216,6 @@ a:hover::after {
     margin: 0;
     padding: 0;
     width: fit-content;
-    text-decoration: underline;
 }
 
 .fastest::after {
