@@ -136,15 +136,23 @@ header a {
     color: white;
 }
 
-a {
+a:not(.eignore) {
     color: white;
     text-decoration: none;
     position: relative;
-    padding: 4px 8px;
     display: inline-block;
 }
 
-a::after {
+.eignore {
+    color: white;
+    text-decoration: none;
+}
+
+a:not(footer *) {
+    padding: 4px 8px;
+}
+
+a:not(.eignore)::after {
     content: "";
     position: absolute;
     top: 0; right: 0; 
@@ -156,7 +164,7 @@ a::after {
     pointer-events: none;
 }
 
-a:hover::after {
+a:not(.eignore):hover::after {
     left: 0; right: auto; 
     width: 100%;
 }
@@ -280,6 +288,99 @@ section {
     margin-top: -6px;    
 }
 
+::selection {
+    background-color: rgb(138, 247, 249);
+    color: rgb(8, 15, 8);
+}
+
+footer {
+    position: relative;
+    overflow: visible;
+    padding-inline: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    margin-top: 150px;
+    background: #000a;
+}
+
+.footimg {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    height: auto;
+    transform: translateY(-40.5%);
+    width: clamp(200px, 44%, 620px);
+}
+
+.fd {
+    margin-inline: auto;
+    margin-bottom: 4rem;
+    display: flex;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    align-items: start;
+    row-gap: 3rem;
+    column-gap: 4rem;
+}
+
+.fd1 {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    width: 17rem;
+}
+
+.fd1 img {
+    margin-bottom: 2rem;
+    display: block;
+    width: 12rem;
+}
+
+.l1s {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.l1s a, .fle {
+    font-size: 15px;
+    opacity: 80%;
+    text-decoration: none;
+    transition: opacity .15s;
+}
+
+.l1s a:hover {
+    opacity: 100%;
+}
+
+.fd2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.fd2 p {
+    margin-bottom: 1rem;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.fd2 ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 0;
+}
+
+#smoll {
+    display: none;
+}
+
 @media (width < 640px) {
     .links {
         display: none;
@@ -300,9 +401,17 @@ section {
     .ships {
         grid-template-columns: 1fr;
     }
-}
-
-::selection {
-    background-color: rgb(138, 247, 249);
-    color: rgb(8, 15, 8);
+    footer {
+        padding-inline: 1rem;
+    }
+    #buttons {
+        flex-direction: column;
+    }
+    #smoll {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
 }
