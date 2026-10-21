@@ -110,7 +110,7 @@ body {
     cursor: default;
 }
 
-.title * { margin: -20px; }
+.title * { margin: -5px; }
 
 .hhead { font-weight: 700; }
 
@@ -412,6 +412,131 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 20px;
+        gap: 0px;
     }
+}
+
+.home-gallery, .home-ysws, .home-platform, .home-shop, .home-closing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    gap: 20px;
+}
+
+.ysws-grid, .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.ysws-card, .shop-card {
+    border: 2px solid #fff9;
+    padding: 16px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #0004;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.ysws-card:hover, .shop-card:hover {
+    background: #fff1;
+}
+
+.shop-card img {
+    width: 120px;
+    object-fit: contain;
+    margin: 8px 0;
+}
+
+.shop-price {
+    background: #fff;
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: fit-content;
+}
+
+.platform-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 200px;
+}
+
+.step img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.step.arrow {
+    font-size: 2rem;
+    color: #fff9;
+}
+
+.custom-details {
+    border-top: #fff9 1px solid;
+    width: 100%;
+    margin-top: 16px;
+    padding-top: 16px;
+    text-align: left;
+    cursor: pointer;
+    background: transparent;
+}
+
+.custom-details summary {
+    font-size: 1.2rem;
+    list-style: none;
+    outline: none;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.custom-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.custom-details p {
+    margin-top: 12px;
+    padding-left: 8px;
+    padding-bottom: 16px;
+}
+
+.custom-details[open] summary ~ * {
+    animation: sweep 0.3s ease-in-out;
+}
+
+@keyframes sweep {
+    0%   { opacity: 0; transform: translateY(-10px) }
+    100% { opacity: 1; transform: translateY(0) }
+}
+
+#rolling-text {
+    display: inline-block;
+    transition: opacity 0.3s;
 }
