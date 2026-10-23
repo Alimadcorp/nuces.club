@@ -10,6 +10,12 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "Mojangles";
+  src: url("fonts/mojangles.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
   font-family: "Phantom Sans";
   src: url("fonts/PhantomSans-Semibold.woff2") format("woff2");
   font-weight: 600;
@@ -352,6 +358,15 @@ footer {
     transition: opacity .15s;
 }
 
+.flu {
+    background-image: url("/images/assets/dirt.png");
+    background-repeat: repeat-x;
+    background-position: top center;
+    background-size: 50% auto; 
+    text-shadow: 2px 2px 0px #000a;
+    font-family: 'Mojangles';
+}
+
 .l1s a:hover {
     opacity: 100%;
 }
@@ -427,10 +442,18 @@ footer {
 
 .ysws-grid, .shop-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 16px;
     width: 100%;
     margin-top: 24px;
+}
+
+.home-events
+{
+    margin-top: 20px;
+}
+.head {
+    margin: auto;
 }
 
 .ysws-card, .shop-card {

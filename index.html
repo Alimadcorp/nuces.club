@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8">
     <title>FAST Hack Club</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/club.png">
+    <link rel="icon" href="images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -18,12 +19,11 @@
         <span class="links">            
             <a href="/gallery">Gallery</a>
             <a href="/faq">FAQ</a>
-            <a href="/vote">Voting</a>
         </span>
     </header>
     <section class="heheead">
         <div class="head">
-            <span class="hehheh" style="margin-bottom: 20px;">
+            <div class="hehheh" style="margin-bottom: 20px;">
                 <p class="hhead">HACK CLUB PRESENTS</p>
                 <h1 class="sp title">FAST's <span class="fastest"
                         style="text-decoration: none; color: rgb(138, 247, 249); padding: 0px 12px; transform: rotate(-2deg)">FASTEST</span>
@@ -33,7 +33,7 @@
                     along the way. Part of a <span class="fastest">worldwide network of high school coding clubs.</span>
                     Make cool things, find people who share your interests, and get help from a community of <span
                         class="fastest">hackers!</span></p>
-            </span>
+            </div>
             <div id="buttons">
                 <a href="https://alimad.fillout.com/hackclub" target="_blank" class="butt">Join us</a>
                 <a href="https://clubs.hackclub.com/dashboard" target="_blank" class="butt"
@@ -43,13 +43,25 @@
                     <a href="/faq">FAQ</a>
                     <a href="/vote">Voting</a>
                 </div>
-                <a href="https://mc.nuces.club">Minecraft Server</a>
+                <a href="https://mc.nuces.club" class="flu">Minecraft Server</a>
             </div>
         </div>
     </section>
 
-    <section class="home-gallery">
+    <section class="home-events">
         <div class="head">
+            <h2 class="sp title">Upcoming<br>Events</h2>
+            <a href="https://haven.dino.icu" target="_blank" class="ysws-card event-card">
+                <div class="shop-price">Nov 14-15, 2026</div>
+                <h3>Hack Club Haven</h3>
+                <p>A worldwide game jam for students aged 13-18 happening in 200+ cities. Build a game with friends, join beginner workshops, and enjoy free food and prizes. No experience needed!</p>
+                <p class="dim">Free to join - haven.hackclub.com</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="home-gallery">
+        <div class="head" onclick="window.open('https://instagram.com/haven.lhr')" style="cursor: pointer;">
             <p class="hhead">PAST EVENT</p>
             <div class="video-container">
             <video id="myVideo" width="640" autoplay loop muted playsinline style="max-width: 90vw; margin: 0;">
@@ -71,7 +83,7 @@
                 <a class="butt" target="_blank" href="https://ammarkansi.github.io/PEAK/">Call a Lantern</a>
                 <a class="butt" target="_blank" href="https://alimadcorp.github.io/boba/">computers</a>
                 <p></p>
-                <p style="text-align: center;">Many more...</p>
+                <a href="/workshops" style="text-align: center; padding-top: 5px; padding-bottom: 5px;">Many more...</a>
             </div>
         </div>
     </section>
@@ -105,7 +117,7 @@
     <section class="home-platform">
         <div class="head">
             <h2 class="sp title">Ship projects.<br>Earn coins.</h2>
-            <p class="subtitle">Run a workshop from the <a href="https://clubs.hackclub.com/workshops" style="color: rgb(138, 247, 249);">catalog</a>, show it off in the <a href="https://clubs.hackclub.com/explore" style="color: rgb(138, 247, 249);">Explore gallery</a>, and turn the coins you earn into gear, grants and merch for your club.</p>
+            <p class="subtitle">We run workshops from the <a href="https://clubs.hackclub.com/workshops" style="color: rgb(138, 247, 249);">catalog</a>, you show off your projects in the <a href="https://clubs.hackclub.com/explore" style="color: rgb(138, 247, 249);">Explore gallery</a>, and we turn the coins you earn into gear, grants and merch for you.</p>
             <div class="platform-steps">
                 <div class="step">
                     <img src="https://clubs.hackclub.com/assets/landing-club-1.webp">
@@ -158,7 +170,7 @@
 
     <section class="home-closing">
         <div class="head">
-            <h2 class="sp title" style="font-size: 4vw;">We are a club that <br><span id="rolling-text" class="fastest" style="color: rgb(138, 247, 249); margin-top: 10px;">ships games for the community to enjoy.</span></h2>
+            <h2 class="sp title">We are a club that <br><span id="rolling-text" class="fastest" style="color: rgb(138, 247, 249); margin-top: 10px;">ships games for the community to enjoy.</span></h2>
             <a href="https://alimad.fillout.com/hackclub" class="butt" target="_blank">Join the Club</a>
         </div>
     </section>
