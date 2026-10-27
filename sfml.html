@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSVP for SFML Workshop</title>
+  <style>
+    body {
+      color: rgb(255, 255, 255);
+      font-family: sans-serif;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      --grid-color: #4445;
+      background-image:
+        linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+      background-size: 40px 40px;
+      background-position: center;
+      background-color: #0e0e12;
+    }
+
+    .loader {
+      border: 4px solid #333;
+      border-top: 4px solid rgb(255, 255, 255);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    a {
+      color: rgb(255, 255, 255);
+      border: 2px solid rgb(255, 255, 255);
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #fff;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="loader"></div>
+  <p>Loading RSVP form...</p>
+  <a id="link" style="display: none;" href="https://alimad.fillout.com/sfml">Still loading? Click here</a>
+
+  <script>
+    setTimeout(() => { link.style.display = 'inline' }, 4000);
+    const url = "https://alimad.fillout.com/sfml";
+
+    document.getElementById('link').href = url;
+    window.location.href = url;
+  </script>
+
+</body>
+
+</html>
